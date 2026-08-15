@@ -6,11 +6,38 @@ document.addEventListener('DOMContentLoaded', () => {
   const body = document.body;
   let mobileNav = document.querySelector('.mobile-nav');
 
+  function buildMobileNav() {
+    if (mobileNav) return mobileNav;
+    const nav = document.createElement('div');
+    nav.className = 'mobile-nav';
+
+    const desktopLinks = document.querySelector('.nav-links');
+    const authActions = document.querySelector('.navbar .auth-actions');
+    if (desktopLinks) {
+      const clone = desktopLinks.cloneNode(true);
+      // Make dropdowns clickable on mobile
+      clone.querySelectorAll('.dropdown > .nav-item').forEach(a => {
+        a.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          a.parentElement.classList.toggle('open');
+        });
+      });
+      nav.appendChild(clone);
+    }
+    if (authActions) {
+      const authClone = authActions.cloneNode(true);
+      nav.appendChild(authClone);
+    }
+    document.querySelector('.navbar')?.after(nav);
+    return nav;
+  }
+
   if (hamburger) {
-    hamburger.addEventListener('click', () => {
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
       if (!mobileNav) {
         mobileNav = buildMobileNav();
-        document.querySelector('.navbar').after(mobileNav);
       }
       const open = mobileNav.classList.toggle('active');
       hamburger.classList.toggle('open', open);
@@ -18,35 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  function buildMobileNav() {
-    const nav = document.createElement('div');
-    nav.className = 'mobile-nav';
-
-    const desktopLinks = document.querySelector('.nav-links');
-    const authActions = document.querySelector('.auth-actions');
-    const clone = desktopLinks.cloneNode(true);
-    const authClone = authActions.cloneNode(true);
-
-    // Make dropdowns clickable on mobile
-    clone.querySelectorAll('.dropdown > .nav-item').forEach(a => {
-      a.addEventListener('click', (e) => {
-        e.preventDefault();
-        a.parentElement.classList.toggle('open');
-      });
-    });
-
-    nav.appendChild(clone);
-    authClone.classList.add('auth-actions');
-    nav.appendChild(authClone);
-    return nav;
-  }
-
-  // Close mobile nav on link click
+  // Close mobile nav on link click outside dropdown toggles
   document.addEventListener('click', (e) => {
-    if (e.target.closest('.mobile-nav a:not(.dropdown > .nav-item)') && mobileNav) {
-      mobileNav.classList.remove('active');
-      hamburger?.classList.remove('open');
-      body.style.overflow = '';
+    if (mobileNav && mobileNav.classList.contains('active')) {
+      if (e.target.closest('.mobile-nav a:not(.dropdown > .nav-item)')) {
+        mobileNav.classList.remove('active');
+        hamburger?.classList.remove('open');
+        body.style.overflow = '';
+      }
     }
   });
 

@@ -56,5 +56,18 @@
 .analytics-legend .dot-orange{width:8px;height:8px;border-radius:50%;background:var(--orange)}
 
 @media(max-width:960px){
-  .showcase-inner,.showcase-inner.reverse{grid-template-columns:1fr;direction:ltr}
+  .showcase{padding:60px 0}
+  .showcase-inner,.showcase-inner.reverse{grid-template-columns:1fr;direction:ltr;gap:40px}
+}
+
+@media(max-width:600px){
+  .showcase-mockup{padding:16px 12px;overflow-x:auto;max-width:100%}
+  .showcase-text h2{font-size:1.65rem}
+  .mock-search{flex-direction:column;gap:8px}
+  .mock-search input{width:100%}
+  .mock-table{font-size:.75rem;min-width:480px}
+  .scraper-stats{grid-template-columns:1fr;gap:8px}
+  .scraper-stat{padding:10px}
+  .scraper-stat .val{font-size:1.25rem}
+  .analytics-bars{height:90px}
 }

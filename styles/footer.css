@@ -40,7 +40,16 @@
 .footer-bottom{padding:24px 0;text-align:center}
 .footer-bottom p{font-size:.8125rem;color:rgba(255,255,255,.4)}
 
-@media(max-width:768px){.footer-grid{grid-template-columns:repeat(2,1fr);gap:32px}}
+@media(max-width:600px){
+  .security h2, .faq h2, .final-cta h2{font-size:1.65rem}
+  .security{padding:48px 0}
+  .faq{padding:54px 0}
+  .final-cta{padding:64px 0}
+  .faq-question{padding:14px 16px;font-size:.9375rem}
+  .faq-answer-inner{padding:0 16px 14px;font-size:.875rem}
+  .final-cta p{font-size:.9375rem}
+}
+
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
 
 /* ===== Scroll Reveal Animation ===== */
