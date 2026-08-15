@@ -1,0 +1,60 @@
+/* ===== Product Showcase (alternating sections) ===== */
+.showcase{padding:100px 0;background:var(--bg)}
+.showcase:nth-child(even){background:var(--bg-soft)}
+.showcase-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.showcase-inner.reverse{direction:rtl}
+.showcase-inner.reverse>*{direction:ltr}
+.showcase-text .label{font-size:.8125rem;font-weight:700;letter-spacing:1.5px;color:var(--orange);text-transform:uppercase;margin-bottom:12px}
+.showcase-text h2{font-size:2rem;margin-bottom:16px;color:var(--navy)}
+.showcase-text p{font-size:1rem;color:var(--text-secondary);line-height:1.7;margin-bottom:20px}
+.showcase-text ul{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.showcase-text li{display:flex;align-items:flex-start;gap:10px;font-size:.9375rem;color:var(--text-secondary)}
+.showcase-text li svg{flex-shrink:0;color:var(--orange);margin-top:3px}
+
+/* Showcase Mockup Cards */
+.showcase-mockup{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow-md)}
+.showcase-mockup .mockup-header{display:flex;align-items:center;gap:8px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.showcase-mockup .mockup-header .dot{width:10px;height:10px;border-radius:50%;background:#E8EAF0}
+.showcase-mockup .mockup-header .dot:first-child{background:#FF605C}
+.showcase-mockup .mockup-header .dot:nth-child(2){background:#FFBD44}
+.showcase-mockup .mockup-header .dot:nth-child(3){background:#00CA4E}
+.mock-search{display:flex;gap:12px;margin-bottom:16px}
+.mock-search input{flex:1;padding:10px 14px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:.875rem;color:var(--text);background:#FAFBFC;pointer-events:none}
+.mock-search .btn{font-size:.8125rem;padding:10px 18px}
+.mock-table{width:100%;font-size:.8125rem;border-collapse:collapse}
+.mock-table th{text-align:left;padding:10px 12px;color:var(--text-secondary);font-weight:600;border-bottom:1px solid var(--border);background:#FAFBFC}
+.mock-table td{padding:10px 12px;border-bottom:1px solid var(--border);color:var(--text)}
+.mock-table .status{display:inline-block;padding:3px 10px;border-radius:99px;font-size:.75rem;font-weight:600}
+.mock-table .status.found{background:#E3FCEF;color:var(--success)}
+.mock-table .status.pending{background:#FFF1EC;color:var(--orange)}
+
+/* Scraper mockup */
+.scraper-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+.scraper-stat{background:var(--bg-soft);border-radius:var(--radius-sm);padding:14px;text-align:center}
+.scraper-stat .val{font-size:1.5rem;font-weight:800;color:var(--navy)}
+.scraper-stat .lbl{font-size:.75rem;color:var(--text-secondary);margin-top:2px}
+.scraper-progress{height:6px;background:var(--border);border-radius:99px;overflow:hidden;margin-top:16px}
+.scraper-progress .bar{height:100%;background:var(--orange);border-radius:99px;width:78%;transition:width 1s ease}
+
+/* Campaign mockup */
+.mock-compose{display:flex;flex-direction:column;gap:12px}
+.mock-field{display:flex;flex-direction:column;gap:4px}
+.mock-field label{font-size:.75rem;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.5px}
+.mock-field input,.mock-field textarea{padding:10px 14px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:.875rem;background:#FAFBFC;font-family:var(--font);pointer-events:none;resize:none}
+.mock-field textarea{min-height:80px}
+.mock-attachment{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--orange-light);border-radius:var(--radius-sm);font-size:.8125rem;color:var(--text)}
+.mock-attachment svg{color:var(--orange)}
+
+/* Analytics mockup */
+.analytics-bars{display:flex;gap:8px;align-items:flex-end;height:120px;padding:16px 0}
+.analytics-bars .abar{flex:1;border-radius:4px 4px 0 0;transition:height .6s ease}
+.analytics-bars .abar:nth-child(odd){background:var(--navy)}
+.analytics-bars .abar:nth-child(even){background:var(--orange)}
+.analytics-legend{display:flex;gap:20px;justify-content:center;margin-top:12px}
+.analytics-legend span{display:flex;align-items:center;gap:6px;font-size:.75rem;color:var(--text-secondary)}
+.analytics-legend .dot-navy{width:8px;height:8px;border-radius:50%;background:var(--navy)}
+.analytics-legend .dot-orange{width:8px;height:8px;border-radius:50%;background:var(--orange)}
+
+@media(max-width:960px){
+  .showcase-inner,.showcase-inner.reverse{grid-template-columns:1fr;direction:ltr}
+}

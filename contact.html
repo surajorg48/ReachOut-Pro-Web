@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — ReachOut Pro</title>
+  <meta name="description" content="Get in touch with ReachOut Pro. Contact us via email surajorg47@gmail.com, phone 8180012573, or connect on LinkedIn." />
+  <link rel="icon" type="image/png" href="assets/logo/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/logo/favicon.png" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <style>
+    .page-hero { padding: 120px 0 60px; background: linear-gradient(180deg, var(--bg-soft) 0%, var(--bg) 100%); text-align: center; }
+    .page-hero h1 { font-size: 3rem; color: var(--navy); margin-bottom: 16px; font-weight: 800; }
+    .page-hero p { font-size: 1.125rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; line-height: 1.6; }
+    .contact-page-section { padding: 80px 0; background: var(--bg); }
+    .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .contact-cards-container { display: flex; flex-direction: column; gap: 20px; }
+    .contact-channel-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px 24px; display: flex; align-items: center; gap: 20px; transition: var(--transition); }
+    .contact-channel-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--orange); }
+    .c-icon-bg { width: 52px; height: 52px; background: var(--orange-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--orange); flex-shrink: 0; }
+    .c-details h3 { font-size: 1.125rem; color: var(--navy); margin-bottom: 4px; }
+    .c-details p { font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 6px; }
+    .c-details a { font-weight: 700; color: var(--orange); font-size: 1.0625rem; word-break: break-all; }
+    .c-details a:hover { text-decoration: underline; }
+    .contact-form-box { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 36px 32px; box-shadow: var(--shadow-md); }
+    .contact-form-box h2 { font-size: 1.75rem; color: var(--navy); margin-bottom: 8px; }
+    .contact-form-box p { font-size: 0.9375rem; color: var(--text-secondary); margin-bottom: 24px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 0.875rem; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+    .form-group input, .form-group textarea { width: 100%; padding: 12px 16px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 0.9375rem; color: var(--text); outline: none; transition: var(--transition); }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(228,87,46,0.12); }
+    @media(max-width: 960px) { .contact-layout { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- ===== Navbar ===== -->
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo"><img src="assets/logo/logo.png" alt="ReachOut Pro" /></a>
+    <nav class="nav-links">
+      <ul>
+        <li class="dropdown">
+          <a href="#" class="nav-item">Product <span class="arrow">▾</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html#lead-discovery">Lead Discovery</a></li>
+            <li><a href="index.html#email-extraction">Email Extraction</a></li>
+            <li><a href="index.html#cold-outreach">Cold Email Outreach</a></li>
+            <li><a href="index.html#campaign-automation">Campaign Automation</a></li>
+            <li><a href="index.html#analytics-preview">Analytics</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#features" class="nav-item">Features</a></li>
+        <li><a href="index.html#how-it-works" class="nav-item">How It Works</a></li>
+        <li><a href="index.html#use-cases" class="nav-item">Use Cases</a></li>
+        <li><a href="index.html#pricing" class="nav-item">Pricing</a></li>
+        <li class="dropdown">
+          <a href="#" class="nav-item">Resources <span class="arrow">▾</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Guides</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Documentation</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="nav-item">Company <span class="arrow">▾</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="careers.html">Careers</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="auth-actions">
+      <a href="/login" class="btn btn-link">Log In</a>
+      <a href="/signup" class="btn btn-primary">Get Started Free</a>
+    </div>
+    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ===== Page Hero ===== -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>We're here to help you get the most out of ReachOut Pro. Reach out to us directly through any channel below.</p>
+  </div>
+</section>
+
+<!-- ===== Contact Content ===== -->
+<section class="contact-page-section">
+  <div class="container">
+    <div class="contact-layout">
+      
+      <!-- Direct Info Cards -->
+      <div class="contact-cards-container">
+        <div class="contact-channel-card">
+          <div class="c-icon-bg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+          <div class="c-details">
+            <h3>Email Support</h3>
+            <p>Direct email for support, inquiries, and feedback.</p>
+            <a href="mailto:surajorg47@gmail.com">surajorg47@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-channel-card">
+          <div class="c-icon-bg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="c-details">
+            <h3>Phone / WhatsApp</h3>
+            <p>Direct line for urgent queries and assistance.</p>
+            <a href="tel:8180012573">+91 8180012573</a>
+          </div>
+        </div>
+
+        <div class="contact-channel-card">
+          <div class="c-icon-bg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div class="c-details">
+            <h3>LinkedIn Profile</h3>
+            <p>Username: <strong>surajorg</strong></p>
+            <a href="https://linkedin.com/in/surajorg" target="_blank" rel="noopener">linkedin.com/in/surajorg</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Send Message Form -->
+      <div class="contact-form-box">
+        <h2>Send Us a Message</h2>
+        <p>Fill out the form below and we will get back to you shortly.</p>
+        <form onsubmit="event.preventDefault(); alert('Thank you for contacting us! We will reply to your email soon.');">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email Address</label>
+            <input type="email" id="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="Question about ReachOut Pro" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="How can we help you?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Message →</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-column">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="index.html#lead-discovery">Lead Discovery</a></li>
+        <li><a href="index.html#email-extraction">Email Extraction</a></li>
+        <li><a href="index.html#cold-outreach">Outreach Automation</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    <p>&copy; 2026 ReachOut Pro. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>
