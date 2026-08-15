@@ -78,8 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ===== Pricing Toggle ===== */
   const toggleBtns = document.querySelectorAll('.pricing-toggle button');
-  const monthlyPrices = ['$0', '$29', '$79'];
-  const yearlyPrices = ['$0', '$24', '$66'];
+  const monthlyPrices = ['₹0', '₹199', '₹1,499'];
+  const yearlyPrices = ['₹0', '₹149', '₹1,199'];
 
   toggleBtns.forEach(btn => {
     btn.addEventListener('click', () => {
